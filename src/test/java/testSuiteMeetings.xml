@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestSuiteMeetings" parallel="false">
+  <test name="TestWeeklyFlat">
+  <groups>
+      <run>
+        <include name="method1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.business.Meetings.MeetingsSuiteData"/>
+      <class name="org.mifos.dmt.business.Meetings.interest.FlatTest"/>
+      <class name="org.mifos.dmt.business.Meetings.schedule.WeeklyScheduleTest"/>
+      <class name="org.mifos.dmt.business.Meetings.repayments.LoanRepaymentTest"/>
+    </classes>
+  </test>
+  <test name="TestWeeklyDeclining">
+  <groups>
+      <run>
+        <include name="method2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.business.Meetings.MeetingsSuiteData"/>
+      <class name="org.mifos.dmt.business.Meetings.interest.DecliningTest"/>
+      <class name="org.mifos.dmt.business.Meetings.schedule.WeeklyScheduleTest"/>
+    </classes>
+  </test>
+  <test name="TestMonthlyFlat">
+  <groups>
+      <run>
+        <include name="method3"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.business.Meetings.MeetingsSuiteData"/>
+      <class name="org.mifos.dmt.business.Meetings.interest.FlatTest"/>
+      <class name="org.mifos.dmt.business.Meetings.schedule.MonthlyScheduleWithDOMTest"/>
+    </classes>
+  </test>
+  <test name="TestMonthlyDeclining">
+  <groups>
+      <run>
+        <include name="method4"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.business.Meetings.MeetingsSuiteData"/>
+      <class name="org.mifos.dmt.business.Meetings.interest.DecliningTest"/>
+      <class name="org.mifos.dmt.business.Meetings.schedule.MonthlyScheduleWithRODTest"/>
+    </classes>
+  </test>
+    <test name="CustomerMigrationTask">
+      <groups>
+      <run>
+        <include name="method5"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.business.Meetings.MeetingsSuiteData"/>
+      <class name="org.mifos.dmt.workflowTasks.CustomerMigrationTaskTest"/>
+      <class name="org.mifos.dmt.workflowTasks.LoanMigrationTaskTest"/>
+    </classes>
+  </test>
+</suite>

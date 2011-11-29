@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+	<appender name="CONSOLE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="DataMigration.log"/>
+		 <param name = "DatePattern" value= "'.'yyyy-MM-dd"/>
+		 <param name = "Append" value= "true"/>
+		<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d  %-5p %c{1} - %m%n"/>
+		</layout>
+	</appender>
+
+	<category name="org.pentaho">
+		<priority value="DEBUG" />
+	</category>
+	
+	<category name="org.apache.xbean">
+		<priority value="WARN" />
+	</category>
+
+	<category name="com.healthmarketscience.jackcess">
+		<priority value="WARN" />
+	</category>
+
+	<category name="org.apache.commons">
+		<priority value="WARN" />
+	</category>
+
+	<category name="org.mortbay">
+		<priority value="ERR" />
+	</category>
+
+	<category
+		name="org.apache.commons.logging.simplelog.log.org.apache.commons.httpclient">
+		<priority value="WARN" />
+	</category>
+	
+	<category
+		name="org.apache.activemq">
+		<priority value="INFO" />
+	</category>
+	
+	<category
+		name="org.apache.camel">
+		<priority value="INFO" />
+	</category>
+	
+	<category
+		name="org.springframework">
+		<priority value="WARN" />
+	</category>
+
+	<category
+		name="org.apache.commons.logging.simplelog.log.org.apache.commons.httpclient.auth">
+		<priority value="WARN" />
+	</category>
+	
+	<category
+		name="org.mifos.dmt">
+		<priority value="DEBUG" />
+	</category>
+	
+	<root>
+		<priority value="DEBUG" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</log4j:configuration>

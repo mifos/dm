@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>transactions2</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2011&#47;02&#47;23 16:53:53.980</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2011&#47;02&#47;23 16:53:53.980</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>staging</name>
+    <server/>
+    <type>MYSQL</type>
+    <access>JNDI</access>
+    <database>staging</database>
+    <port>1521</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  </order>
+  <step>
+    <name>Execute SQL script 2</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>Y</replace_variables>
+    <sql>insert into account_payment
+select null payment_id, account_id ACCOUNT_ID, 1 PAYMENT_TYPE_ID, principal_currency_id CURRENCY_ID, 
+principal_paid+interest_paid+penalty_paid+misc_fees_paid+misc_penalty_paid+ifnull(total_fees.fee_amount,0) AMOUNT,&quot;&quot; RECEIPT_NUMBER,
+null VOUCHER_NUMBER, null CHECK_NUMBER, payment_date PAYMENT_DATE, null RECEIPT_DATE, null BANK_NAME, null COMMENT
+from loan_schedule
+left outer join 
+(select sum(loan_fee_schedule.amount) as fee_amount,id 
+from
+loan_fee_schedule
+group by loan_fee_schedule.id) total_fees
+on total_fees.id=loan_schedule.id
+where loan_schedule.payment_date is not null and loan_schedule.account_id &gt; ${ket_maxAccountID};
+
+commit;
+
+insert into account_trxn
+select null ACCOUNT_TRXN_ID, account_payment.account_id ACCOUNT_ID, payment_id PAYMENT_ID, 1 PERSONNEL_ID, 1 ACCOUNT_ACTION_ID, 
+null CURRENCY_ID, account_payment.currency_id AMOUNT_CURRENCY_ID,amount AMOUNT, account_payment.payment_date DUE_DATE,&apos;-&apos; COMMENTS,
+ account_payment.payment_date ACTION_DATE,
+CURDATE() CREATED_DATE, account.customer_id CUSTOMER_ID, loan_schedule.installment_id INSTALLMENT_ID, null RELATED_TRXN_ID
+from account_payment
+inner join account on account.account_id = account_payment.account_id
+inner join loan_schedule on loan_schedule.account_id = account_payment.account_id and loan_schedule.payment_date = account_payment.payment_date
+where loan_schedule.payment_date is not null and account_payment.account_id &gt; ${ket_maxAccountID} and account_payment.payment_id &gt; ${ket_maxAccountPaymentID2};
+
+commit;
+
+insert into loan_trxn_detail
+select account_trxn_id ACCOUNT_TRXN_ID, principal_paid PRINCIPAL_AMOUNT, PRINCIPAL_PAID_CURRENCY_ID,
+interest_paid INTEREST_AMOUNT, INTEREST_PAID_CURRENCY_ID, penalty_paid PENALTY_AMOUNT, PENALTY_PAID_CURRENCY_ID,
+misc_fees_paid MISC_FEE_AMOUNT, MISC_FEES_PAID_CURRENCY_ID, misc_penalty_paid MISC_PENALTY_AMOUNT, MISC_PENALTY_PAID_CURRENCY_ID
+from account_trxn 
+inner join loan_schedule on loan_schedule.account_id = account_trxn.account_id and 
+loan_schedule.installment_id = account_trxn.installment_id
+where account_action_id = 1 and payment_id &gt; ${ket_maxAccountPaymentID2};
+
+commit;
+
+
+insert into fee_trxn_detail
+select null FEE_TRXN_DETAIL_ID,
+account_trxn_id ACCOUNT_TRXN_ID,
+loan_fee_schedule.account_fee_id,
+loan_fee_schedule.AMOUNT_CURRENCY_ID FEE_AMOUNT_CURRENCY_ID,
+loan_fee_schedule.amount as fee_amount
+from account_trxn 
+inner join loan_schedule on loan_schedule.account_id = account_trxn.account_id and loan_schedule.installment_id = account_trxn.installment_id
+inner join loan_fee_schedule on loan_fee_schedule.id=loan_schedule.id
+where account_action_id = 1 and account_trxn.payment_id &gt; ${ket_maxAccountPaymentID2}
+and account_trxn.installment_id=1
+and loan_schedule.payment_date is not null;
+
+commit;
+
+drop table if exists dmt_glcode;
+
+create table dmt_glcode
+(fin_action_desc varchar(200),
+glcode_id   smallint);
+
+insert into dmt_glcode values(&apos;Disbursal_debit&apos;,7);
+insert into dmt_glcode values(&apos;Disbursal_credit&apos;,5);
+insert into dmt_glcode values(&apos;Principal_debit&apos;,5);
+insert into dmt_glcode values(&apos;Principal_credit&apos;,7);
+insert into dmt_glcode values(&apos;Interest_debit&apos;,5);
+insert into dmt_glcode values(&apos;Interest_credit&apos;,9);
+insert into dmt_glcode values(&apos;Fee_debit&apos;,10);
+insert into dmt_glcode values(&apos;Fee_credit&apos;,11);
+
+commit;
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 7 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Client Loans&quot;) GLCODE_ID,
+ t.amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, t.amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;-&apos; NOTES, 0 DEBIT_CREDIT_FLAG
+from account_trxn t
+where t.account_action_id = 10 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 7 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+ t.amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, t.amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;-&apos; NOTES, 1 DEBIT_CREDIT_FLAG
+from account_trxn t
+where t.account_action_id = 10 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 1 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Branches&quot;)  GLCODE_ID,
+ lt.principal_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.principal_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 0 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join loan_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id 
+where t.account_action_id = 1 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 1 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Client Loans&quot;) GLCODE_ID,
+ lt.principal_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.principal_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 1 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join loan_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id 
+where t.account_action_id = 1 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 2 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+ lt.interest_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.interest_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 0 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join loan_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id 
+where t.account_action_id = 1 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 2 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Interest Receivables&quot;) GLCODE_ID,
+ lt.interest_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.interest_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 1 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join loan_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id 
+where t.account_action_id = 1 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+insert into financial_trxn
+select null TRXN_ID,
+ t.account_trxn_id ACCOUNT_TRXN_ID,
+ null RELATED_FIN_TRXN,
+ null CURRENCY_ID, 
+3 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+lt.fee_amount POSTED_AMOUNT,
+t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, 
+lt.fee_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,
+t.action_date ACTION_DATE,
+ t.action_date POSTED_DATE, 
+t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED,
+ &apos;Payment rcvd.&apos; NOTES,
+ 0 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join fee_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id 
+where t.account_action_id in (1,4) and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+insert into financial_trxn
+select null TRXN_ID,
+t.account_trxn_id ACCOUNT_TRXN_ID,
+ null RELATED_FIN_TRXN,
+ null CURRENCY_ID, 
+3 FIN_ACTION_ID, 
+(select fees.glcode_id from fee_trxn_detail a
+inner join account_fees on a.account_fee_id=account_fees.account_fee_id
+inner join fees on fees.fee_id=account_fees.fee_id where a.fee_trxn_detail_id=lt.fee_trxn_detail_id) GLCODE_ID,
+lt.fee_amount POSTED_AMOUNT,
+t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, 
+lt.fee_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,
+t.action_date ACTION_DATE,
+ t.action_date POSTED_DATE, 
+t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED,
+ &apos;Payment rcvd.&apos; NOTES,
+ 1 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join fee_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id 
+where t.account_action_id in (1,4)  and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 3 FIN_ACTION_ID, 
+(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+ ft.fee_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID,  ft.fee_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 0 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join fee_trxn_detail ft on t.account_trxn_id=ft.account_trxn_id
+where t.account_action_id = 12 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+insert into financial_trxn
+select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 3 FIN_ACTION_ID, 
+(select fees.glcode_id from fee_trxn_detail a
+inner join account_fees on a.account_fee_id=account_fees.account_fee_id
+inner join fees on fees.fee_id=account_fees.fee_id where a.fee_trxn_detail_id=ft.fee_trxn_detail_id) GLCODE_ID,
+ ft.fee_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID,  ft.fee_amount BALANCE_AMOUNT,
+t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
+1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 1 DEBIT_CREDIT_FLAG
+from account_trxn t
+inner join fee_trxn_detail ft on t.account_trxn_id=ft.account_trxn_id
+where t.account_action_id = 12 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID};
+
+commit;
+
+insert into loan_activity_details
+select null id, a.created_by createdBy, a.account_id accountId, a.created_date createdDate,&apos;Loan Disbursal&apos; comments,
+ la.loan_amount principal, ORIG_PRINCIPAL_CURRENCY_ID currency, 0 interest,
+ ORIG_INTEREST_CURRENCY_ID curr, 0 penalty, ORIG_PENALTY_CURRENCY_ID curr, 0 fee, ORIG_FEES_CURRENCY_ID curr, 
+la.loan_amount balancePrincipal, ORIG_PRINCIPAL_CURRENCY_ID curr, ls.orig_interest balanceInterest, ORIG_INTEREST_CURRENCY_ID curr, 
+ls.orig_penalty balancePenalty, ORIG_PENALTY_CURRENCY_ID curr, ls.orig_fees balanceFee, ORIG_FEES_CURRENCY_ID curr
+from loan_account la
+inner join account a on la.account_id = a.account_id
+inner join loan_summary ls on la.account_id = ls.account_id
+where la.account_id &gt;${ket_maxAccountID}
+and a.account_state_id in (5,6,9,7,8);
+
+commit;
+
+insert into loan_activity_details
+select null id, a.created_by createdBy, a.account_id accountId, a.created_date createdDate,&apos;Payment rcvd.&apos; comments,
+ 0 principal, ORIG_PRINCIPAL_CURRENCY_ID currency, 0 interest,
+ ORIG_INTEREST_CURRENCY_ID curr, 0 penalty, ORIG_PENALTY_CURRENCY_ID curr, ifnull(disb_fees.fees_disb,0) fee, ORIG_FEES_CURRENCY_ID curr, 
+la.loan_amount balancePrincipal, ORIG_PRINCIPAL_CURRENCY_ID curr, ls.orig_interest balanceInterest, ORIG_INTEREST_CURRENCY_ID curr, 
+ls.orig_penalty balancePenalty, ORIG_PENALTY_CURRENCY_ID curr, ls.orig_fees-ifnull(disb_fees.fees_disb,0) balanceFee, ORIG_FEES_CURRENCY_ID curr
+from loan_account la
+inner join account a on la.account_id = a.account_id
+left join
+(select sum(account_fees.account_fee_amnt) fees_disb,account_fees.account_id
+from account_fees
+inner join fee_frequency on account_fees.fee_id=fee_frequency.fee_id
+where fee_frequency.frequency_payment_id=2
+group by account_fees.account_id
+) disb_fees
+on disb_fees.account_id=a.account_id
+inner join loan_summary ls on la.account_id = ls.account_id
+where la.account_id &gt;${ket_maxAccountID}
+and a.account_state_id in (5,6,9,7,8);
+
+commit;
+
+
+insert into loan_activity_details
+select null id, t.personnel_id createdBy, t.account_id accountId, t.action_date createdDate,&apos;Payment rcvd.&apos; comments,
+ lt.principal_amount principal, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID currency, 
+lt.interest_amount interest,
+ lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr,
+ 0 penalty, 
+ lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr,
+ 0 fee, 
+ lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr, 
+(select distinct(loan_summary.orig_principal) - sum(lt.principal_amount) 
+from account_trxn innertbl 
+inner join loan_summary on innertbl.account_id = loan_summary.account_id
+inner join loan_trxn_detail lt on lt.account_trxn_id = innertbl.account_trxn_id
+where innertbl.ACCOUNT_ID = t.ACCOUNT_ID and innertbl.account_trxn_id &lt;= t.account_trxn_id and innertbl.account_action_id = 1) prin_balance, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr, 
+(select distinct(loan_summary.orig_interest) - sum(lt.interest_amount) 
+from account_trxn innertbl 
+inner join loan_summary on innertbl.account_id = loan_summary.account_id
+inner join loan_trxn_detail lt on lt.account_trxn_id = innertbl.account_trxn_id
+where innertbl.ACCOUNT_ID = t.ACCOUNT_ID and innertbl.account_trxn_id &lt;= t.account_trxn_id and innertbl.account_action_id = 1) int_balance, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr,
+0 balancePenalty,  
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr, 
+0 balanceFee, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr 
+from account_trxn t
+inner join loan_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id
+ where t.account_action_id = 1 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID}
+and t.installment_id&lt;&gt;1;
+
+
+commit;
+
+insert into loan_activity_details
+select null id, t.personnel_id createdBy, t.account_id accountId, t.action_date createdDate,&apos;Payment rcvd.&apos; comments,
+ lt.principal_amount principal, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID currency, 
+lt.interest_amount interest,
+ lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr,
+ 0 penalty, 
+ lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr,
+ifnull(ft.fee_amount,0) fee, 
+ lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr, 
+(select distinct(loan_summary.orig_principal) - sum(lt.principal_amount) 
+from account_trxn innertbl 
+inner join loan_summary on innertbl.account_id = loan_summary.account_id
+inner join loan_trxn_detail lt on lt.account_trxn_id = innertbl.account_trxn_id
+where innertbl.ACCOUNT_ID = t.ACCOUNT_ID and innertbl.account_trxn_id &lt;= t.account_trxn_id and innertbl.account_action_id = 1) prin_balance, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr, 
+(select distinct(loan_summary.orig_principal) - sum(lt.interest_amount) 
+from account_trxn innertbl 
+inner join loan_summary on innertbl.account_id = loan_summary.account_id
+inner join loan_trxn_detail lt on lt.account_trxn_id = innertbl.account_trxn_id
+where innertbl.ACCOUNT_ID = t.ACCOUNT_ID and innertbl.account_trxn_id &lt;= t.account_trxn_id and innertbl.account_action_id = 1) int_balance, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr,
+0 balancePenalty,  
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr, 
+(select distinct(loan_summary.orig_fees) - ifnull(sum(lt.fee_amount),0) 
+from account_trxn innertbl 
+inner join loan_summary on innertbl.account_id = loan_summary.account_id
+inner join fee_trxn_detail lt on lt.account_trxn_id = innertbl.account_trxn_id
+where innertbl.ACCOUNT_ID = t.ACCOUNT_ID and innertbl.account_trxn_id &lt;= t.account_trxn_id and innertbl.account_action_id = 1) balanceFee, 
+lt.PRINCIPAL_AMOUNT_CURRENCY_ID curr 
+from account_trxn t
+inner join loan_trxn_detail lt on lt.account_trxn_id = t.account_trxn_id
+left join fee_trxn_detail ft on ft.account_trxn_id = t.account_trxn_id
+where t.account_action_id = 1 and t.account_trxn_id &gt; ${ket_maxAccountTrxnID}
+and t.installment_id=1;
+
+commit;
+
+</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>313</xloc>
+      <yloc>146</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xmlns:broker="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+        http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+	<bean id="generateCustomerSchedule" class="org.mifos.dmt.workflowTasks.CustomerMigrationTask"></bean>
+	<bean id="generateLoanSchedule" class="org.mifos.dmt.workflowTasks.LoanMigrationTask"></bean>
+    <bean id="dmtParamInjection" class="org.mifos.dmt.workflowTasks.DMTParamInjection"></bean>
+    <bean id="productionBackup" class="org.mifos.dmt.workflowTasks.GenerateProductionDump"></bean>
+    <bean id="productionRollback" class="org.mifos.dmt.workflowTasks.RollBackProduction"></bean>
+    <bean id="loadProductionDataToDMT" class="org.mifos.dmt.workflowTasks.LoadProductionToDMT"></bean>
+    <bean id="prepStaging" class="org.mifos.dmt.workflowTasks.PrepStaging"></bean>
+    <bean id="finalStepOfMigration" class="org.mifos.dmt.workflowTasks.FinalStepOfMigration"></bean>
+ 	<!--  Database connection activity class -->
+ 	<bean id="dbConnect" class="org.mifos.dmt.util.DBConnection"></bean>  	
+ 	<!--  Reading properties and implementing class -->
+ 	<bean id="parsingValidators" class="org.mifos.dmt.validation.ParsingValidators" />
+ 	
+ 	<bean id="validateDuplicate" class="org.mifos.dmt.validation.validators.Duplicate"/>
+
+ 	
+ 	<bean id="validateHierarchy" class="org.mifos.dmt.validation.validators.Hierarchy"/>
+ 
+ 	<bean id="validateMandatory" class="org.mifos.dmt.validation.validators.Mandatory"/>
+
+ 	
+ 	<bean id="validateRange" class="org.mifos.dmt.validation.validators.Range"/>
+ 
+ 	
+ 	<bean id="validateDateCheck" class="org.mifos.dmt.validation.validators.DateCheck"/>
+ 	<bean id="validateGroupLoans" class="org.mifos.dmt.validation.validators.GroupLoans"/>
+ 	<bean id="validateLoanAccountProductRecurrence" class="org.mifos.dmt.validation.validators.LoanAccountProductRecurrence"/>
+ 	<bean id="validateClientLoanAccountRecurrence" class="org.mifos.dmt.validation.validators.ClientLoanAccountRecurrence"/>
+
+ 	    <bean id="validate" class="org.mifos.dmt.workflowTasks.Validate">
+ 		<property name="validateMandatory" ref="validateMandatory"/>
+ 		<property name="validateDuplicate" ref="validateDuplicate"/>
+ 		<property name="validateHierarchy" ref="validateHierarchy"/> 		
+ 		<property name="validateRange" ref="validateRange"/>
+ 		<property name="validateDateCheck" ref="validateDateCheck"/>
+ 		<property name="validateGroupLoans"	ref="validateGroupLoans"/>
+ 		<property name="validateLoanAccountProductRecurrence" ref="validateLoanAccountProductRecurrence"/>
+ 		<property name="validateClientLoanAccountRecurrence" ref="validateClientLoanAccountRecurrence"/>
+ 	</bean> 	
+ 	 	
+ 	  
+</beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="TestCorrectExcelStructure">
+    <classes>
+      <class name="org.mifos.dmt.excel.workbookValidator.SheetStructureTest"/>
+      <class name="org.mifos.dmt.excel.columnValidator.ColumnStructureTest"/>
+      <class name="org.mifos.dmt.excel.cleanup.PurgeEmptyRowsTest"/>
+      <class name="org.mifos.dmt.excel.CreateExcelTest"/>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestSuiteValidations" parallel="false">
+  <test name="TestAssertTrue">
+  <groups>
+      <run>
+        <include name="method1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.validation.TestSuiteData"/>
+      <class name="org.mifos.dmt.validation.validators.DateCheckTest"/>
+      <class name="org.mifos.dmt.validation.validators.GroupLoansTest"/>
+      <class name="org.mifos.dmt.validation.validators.RangeTest"/>
+      <class name="org.mifos.dmt.validation.validators.HierarchyTest"/>
+      <class name="org.mifos.dmt.validation.validators.DuplicateTest"/>
+      <class name="org.mifos.dmt.validation.validators.MandatoryTest"/>
+      <class name="org.mifos.dmt.validation.validators.LoanAccountProductRecurrenceTest"/>
+      <class name="org.mifos.dmt.validation.validators.ClientLoanAccountRecurrenceTest"/>
+    </classes>
+  </test>
+    <test name="TestAssertFalse">
+  <groups>
+      <run>
+        <include name="method2"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.mifos.dmt.validation.TestSuiteData"/>
+      <class name="org.mifos.dmt.validation.validators.DateCheckTest"/>
+      <class name="org.mifos.dmt.validation.validators.GroupLoansTest"/>
+      <class name="org.mifos.dmt.validation.validators.RangeTest"/>
+      <class name="org.mifos.dmt.validation.validators.HierarchyTest"/>
+      <class name="org.mifos.dmt.validation.validators.DuplicateTest"/>
+      <class name="org.mifos.dmt.validation.validators.MandatoryTest"/>
+      <class name="org.mifos.dmt.validation.validators.LoanAccountProductRecurrenceTest"/>
+      <class name="org.mifos.dmt.validation.validators.ClientLoanAccountRecurrenceTest"/>
+  </classes>
+  </test>
+</suite>
