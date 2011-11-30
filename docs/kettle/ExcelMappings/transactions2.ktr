@@ -181,7 +181,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 7 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Client Loans&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Loans to clients&quot;) GLCODE_ID,
  t.amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, t.amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;-&apos; NOTES, 0 DEBIT_CREDIT_FLAG
@@ -193,7 +193,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 7 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Bank Account 1&quot;) GLCODE_ID,
  t.amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, t.amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;-&apos; NOTES, 1 DEBIT_CREDIT_FLAG
@@ -204,7 +204,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 1 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Branches&quot;)  GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Bank Account 1&quot;)  GLCODE_ID,
  lt.principal_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.principal_amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 0 DEBIT_CREDIT_FLAG
@@ -217,7 +217,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 1 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Client Loans&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Loans to clients&quot;) GLCODE_ID,
  lt.principal_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.principal_amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 1 DEBIT_CREDIT_FLAG
@@ -230,7 +230,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 2 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Bank Account 1&quot;) GLCODE_ID,
  lt.interest_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.interest_amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 0 DEBIT_CREDIT_FLAG
@@ -243,7 +243,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 2 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Interest Receivables&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Interest income from loans&quot;) GLCODE_ID,
  lt.interest_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, lt.interest_amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 1 DEBIT_CREDIT_FLAG
@@ -259,7 +259,7 @@ select null TRXN_ID,
  null RELATED_FIN_TRXN,
  null CURRENCY_ID, 
 3 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Bank Account 1&quot;) GLCODE_ID,
 lt.fee_amount POSTED_AMOUNT,
 t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID, 
 lt.fee_amount BALANCE_AMOUNT,
@@ -303,7 +303,7 @@ commit;
 
 insert into financial_trxn
 select null TRXN_ID, t.account_trxn_id ACCOUNT_TRXN_ID, null RELATED_FIN_TRXN, null CURRENCY_ID, 3 FIN_ACTION_ID, 
-(select glcode_id from coa where coa_name=&quot;Branches&quot;) GLCODE_ID,
+(select glcode_id from coa where coa_name=&quot;Bank Account 1&quot;) GLCODE_ID,
  ft.fee_amount POSTED_AMOUNT,t.amount_currency_id POSTED_AMOUNT_CURRENCY_ID,  ft.fee_amount BALANCE_AMOUNT,
 t.amount_currency_id BALANCE_AMOUNT_CURRENCY_ID,t.action_date ACTION_DATE, t.action_date POSTED_DATE, t.personnel_id POSTED_BY,
 1 ACCOUNTING_UPDATED, &apos;Payment rcvd.&apos; NOTES, 0 DEBIT_CREDIT_FLAG
