@@ -87,6 +87,7 @@ public class GenericKettleJobService extends Task {
 
 	private boolean executeJob(String absJobPath) throws DMTException {
 		try {
+			boolean jobStatus = true;
 			KettleEnvironment.init();
 			JobMeta jobMeta = new JobMeta(absJobPath, null);
 			Job job = new Job(null, jobMeta);
@@ -95,20 +96,23 @@ public class GenericKettleJobService extends Task {
 			job.waitUntilFinished();
 			if (LogMessage.logs.size() > 0) {
 				for (int i = 0; i < LogMessage.logs.size(); i++) {
-					if (LogMessage.logs.get(i).get(0).equalsIgnoreCase("error"))
+					if (LogMessage.logs.get(i).get(0).equalsIgnoreCase("error")) { 
 						logger.error(LogMessage.logs.get(i).get(1));
+						jobStatus=false;
+					}
 				}
 			}
 			LogMessage.logs.clear();
 			if (job.getErrors() >= 0) {
 				//logger.error("Errors in executing kettle job "+absJobPath.substring(absJobPath.lastIndexOf("\\")));
 			}
+			return jobStatus;
 		} catch (KettleException e) {
 			LogMessage.logs.clear();
 			logger.error("Kettle Exception thrown, halting migration:"+ e);
 			return false;
 		}
-		return true;
+		
 	}
 
 	private boolean preCheckConditions(String pathToJob, String jobName) {

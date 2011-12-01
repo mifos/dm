@@ -22,29 +22,31 @@ package org.mifos.dmt.logging;
 
 import java.util.ArrayList;
 
-
 public class DMTLogStore {
-	
+
 	private static volatile DMTLogStore loggerObject = new DMTLogStore();
 	private ArrayList<ArrayList<String>> logQueue;
-	
+	private static boolean migrationHasErrors = false;
+
 	private DMTLogStore() {
 		setLogQueue(new ArrayList<ArrayList<String>>());
 	}
-	
+
 	public static synchronized DMTLogStore getInstance() {
 		return loggerObject;
 	}
-	
+
 	public Object clone() throws CloneNotSupportedException {
 		throw new CloneNotSupportedException();
 	}
-	
+
 	public void addToLogs(String logger, String level, String message) {
 		ArrayList<String> temp = new ArrayList<String>();
 		temp.add(level);
 		temp.add(message);
 		this.logQueue.add(temp);
+		if (level.equalsIgnoreCase("error"))
+			migrationHasErrors = true;
 	}
 
 	public void setLogQueue(ArrayList<ArrayList<String>> queue) {
@@ -57,6 +59,15 @@ public class DMTLogStore {
 
 	public void clearLogs() {
 		this.logQueue.clear();
-		
+
 	}
+
+	public static boolean migrationHasErrors() {
+		return migrationHasErrors;
+	}
+
+	public static void resetMigrationErrorFlag() {
+		migrationHasErrors = false;
+	}
+
 }

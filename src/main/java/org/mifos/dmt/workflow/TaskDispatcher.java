@@ -35,12 +35,13 @@ public class TaskDispatcher {
 
 	public void dispatchDMTTasks() {
 		try {
+			DMTLogStore.resetMigrationErrorFlag();
 			DMTLock migrationLock = DMTLock.getInstance();
 			if (!migrationLock.isLocked()) {
 				migrationLock.getLock();
 				TaskQueue dmtTasks = new TaskQueue();
 				dmtTasks.createDMTRoute();
-				//FIXME create a getter for taskqueue
+				// FIXME create a getter for taskqueue
 				ArrayList<Task> taskQueue = dmtTasks.taskQueue;
 				ListIterator<Task> iterator = taskQueue.listIterator();
 				boolean status = true;
@@ -52,7 +53,11 @@ public class TaskDispatcher {
 					status = task.execute();
 				}
 				migrationLock.releaseLock();
-				logger.info("Data Migration Toolkit successfully completed migration");
+				if (!DMTLogStore.migrationHasErrors()) {
+					logger.info("Data Migration Toolkit successfully completed migration");
+				} else {
+					logger.error("Data Migration failed due to previous errors");
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
